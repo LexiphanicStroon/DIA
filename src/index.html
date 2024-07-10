@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="particles.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>DIA Projects</title>
+  </head>
+  <body class="bg-black">
+    <div id="home" class="relative h-screen flex flex-col justify-between">
+      <div
+        id="particles-js"
+        class="absolute w-full h-full top-0 left-0 z-0"
+      ></div>
+      <div
+        id="content"
+        class="relative z-10 flex flex-col justify-between h-full"
+      >
+        <nav id="top-nav">
+          <ul
+            class="unselectable font-medium text-white font-montserrat flex gap-16 text-lg justify-center p-3"
+          >
+            <li>
+              <a class="hover:text-electric-blue" href="#home">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-electric-blue" href="#services">Services</a>
+            </li>
+            <li>
+              <a class="hover:text-electric-blue" href="#about">About</a>
+            </li>
+            <li>
+              <a class="hover:text-electric-blue" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex-grow flex flex-col justify-center items-center">
+          <img
+            class="unselectable w-[450px]"
+            src="../assets/fullTextWolf.png"
+            alt="Logo"
+          />
+          <a
+            id="scroll-btn"
+            href="#services"
+            class="bg-electric-blue font-montserrat text-white px-2.5 py-3 text-xl mt-8 rounded-md hover:shadow-electric-blue transition-all hover:shadow-lg transform duration-150 ease-in-out"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <section
+      id="services"
+      class="h-screen flex flex-col justify-center items-center text-white"
+    >
+      <h2 class="text-4xl mb-4">Our Services</h2>
+      <img class="clipped-image w-56" src="../assets/img/insul.jpg" alt="Insulation service image">
+    </section>
+    <section
+      id="about"
+      class="h-screen flex flex-col justify-center items-center text-white bg-gray-800"
+    >
+      <h2 class="text-4xl mb-4">About Us</h2>
+      <p class="text-xl">Information about the company...</p>
+    </section>
+    <section
+      id="contact"
+      class="h-screen flex flex-col jusFtify-center items-center text-white bg-gray-900"
+    >
+      <h2 class="text-4xl mb-4">Contact Us</h2>
+      <p class="text-xl">Contact details...</p>
+    </section> -->
+    <script src="app.js"></script>
+  </body>
+</html>

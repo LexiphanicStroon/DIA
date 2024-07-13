@@ -56,6 +56,10 @@ img.unselectable {
   transform: translateY(-5px);
 }
 
+.links:hover {
+  transform: translateY(-5px);
+}
+
 .clipped-image {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
 }

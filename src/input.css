@@ -255,7 +255,7 @@ img.unselectable {
 }
 
 #about h2 {
-    margin-bottom: 1.5rem; /* Add margin for better spacing */
+  margin-bottom: 1.5rem; /* Add margin for better spacing */
 }
 
 #about h3 {
@@ -266,6 +266,39 @@ img.unselectable {
 #about p {
   color: #4a4a4a;
   line-height: 1.6; /* Improve readability */
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 640px) {
+  #about {
+    padding: 40px 10px; /* Adjust padding for mobile */
+  }
+  
+  #about .container {
+    max-width: 100%; /* Allow the container to take full width on mobile */
+    padding: 0 1rem; /* Add padding for better spacing */
+  }
+
+  #about img {
+    max-width: 100%; /* Ensure the image takes full width on mobile */
+    margin-bottom: 1rem; /* Add margin below the image */
+  }
+
+  #about h2, #about h3, #about p {
+    text-align: center; /* Center align text for better readability on mobile */
+  }
+
+  #about h2 {
+    font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  #about h3 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  #about p {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
 }
 
 @media (min-width: 1024px) {
@@ -281,6 +314,7 @@ img.unselectable {
     padding-left: 2rem; /* Ensure text has enough space */
   }
 }
+
 
 .footer {
   background-color: #2d3a4f;

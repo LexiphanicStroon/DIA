@@ -1082,6 +1082,7 @@ img.unselectable {
   height: 350px;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .image-container img {
@@ -1117,6 +1118,15 @@ img.unselectable {
   text-align: left;
   margin: 0;
   z-index: 2;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 640px) {
+  .image-container {
+    width: 200px;
+    height: 280px;
+  }
 }
 
 .review-section {
@@ -1383,6 +1393,11 @@ img.unselectable {
     padding-right: 6rem;
   }
 
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .sm\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -1391,11 +1406,6 @@ img.unselectable {
   .sm\:py-2\.5 {
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-  }
-
-  .sm\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .sm\:text-left {

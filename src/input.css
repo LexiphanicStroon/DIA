@@ -93,11 +93,13 @@ img.unselectable {
 .unselectable {
   user-select: none;
 }
+
 .image-container {
   width: 250px;
   height: 350px;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .image-container img {
   width: 100%;
@@ -129,6 +131,14 @@ img.unselectable {
   text-align: left;
   margin: 0;
   z-index: 2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .image-container {
+    width: 200px;
+    height: 280px;
+  }
 }
 
 .review-section {

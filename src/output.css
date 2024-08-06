@@ -1062,6 +1062,19 @@ img.unselectable {
   background-position: center;
 }
 
+@media (max-width: 640px) {
+  #services {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 12.5%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('assets/img/pattern.svg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

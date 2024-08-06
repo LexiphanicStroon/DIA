@@ -86,8 +86,14 @@ img.unselectable {
 
 @media (max-width: 640px) {
   #services {
-    background-size: 200% auto; /* Extend the background size on mobile */
-    background-position: top center; /* Adjust the position to start from the top */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 12.5%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('assets/img/pattern.svg');
+  background-size: cover;
+  background-position: center;
   }
 }
 

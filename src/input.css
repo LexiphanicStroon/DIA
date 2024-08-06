@@ -83,6 +83,14 @@ img.unselectable {
   background-size: cover;
   background-position: center;
 }
+
+@media (max-width: 640px) {
+  #services {
+    background-size: 200% auto; /* Extend the background size on mobile */
+    background-position: top center; /* Adjust the position to start from the top */
+  }
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

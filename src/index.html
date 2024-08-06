@@ -21,7 +21,7 @@
     <script defer src="/_vercel/insights/script.js"></script>
     <title>DIA Projects</title>
   </head>
-  <body class="bg-black">
+  <body class="bg-black font-gothamBook">
     <div id="home" class="relative h-screen flex flex-col justify-between">
       <div
         id="particles-js"
@@ -127,11 +127,11 @@
         </div>
         <!-- Add more items as needed -->
       </div>
-      <div class="text-center mt-6">
-        <h2 class="text-2xl font-bold mb-4 text-[#4dc5e7]">
+      <div class="text-center mt-4 ">
+        <h2 class="text-2xl font-bold font-gothamBold mb-4 text-[#4dc5e7]">
           CONTACT US TODAY FOR A FREE QUOTE
         </h2>
-        <p class="max-w-xl mx-auto text-gray-900 text-lg font-medium">
+        <p class="max-w-xl mx-auto text-gray-900 text-lg font-semibold">
           Discover how we can tailor our services to meet your specific needs!
           From minor repairs to custom projects, we handle it all with expertise
           and care.
@@ -140,28 +140,28 @@
     </section>
     <section class="review-section relative bg-[#2d3a4f]">
       <div class="content">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
+        <div class="stars font-bold">★★★★★</div>
+        <div class="quote font-medium">
           I couldn’t be happier with the landscaping job Kevin and Tyson
           provided! They were professional and efficient, and I’ll definitely be
           calling them again for future projects.
         </div>
         <div class="author">- M. FRIESEN</div>
       </div>
-      <img src="assets/img/navyWolf.png" alt="Logo" class="logo" />
+      <img src="assets/halfWolf.png" alt="Logo" class="logo" />
     </section>
 <!-- about section -->
 <section id="about" class="bg-white py-10">
   <div class="container mx-auto px-6">
     <div class="w-full max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-6 text-[#2d3a4f] text-left">About Us</h2>
+      <h2 class="text-4xl font-bold mb-6 text-[#2d3a4f] font-gothamBold text-left">About Us</h2>
       <div class="flex flex-col lg:flex-row justify-between items-start">
         <div class="flex flex-col items-start lg:w-1/2">
           <img src="assets/img/fullText.png" alt="About Us" class="w-full max-w-md lg:mb-0">
         </div>
         <div class="lg:w-1/2 lg:pl-6">
-          <h3 class="text-2xl font-semibold text-[#4dc5e7]">KEVIN AND TYSON HERE, THE PROUD OWNERS OF DO IT ALL PROJECTS!</h3>
-          <p class="mt-4 text-gray-700 font-medium text-lg">We’re passionate about providing top-notch service and bringing a fresh perspective to the industry. With our combined skills and dedication, we handle everything from small repairs to major renovations. We’re here to make your home improvement projects stress-free and successful. Reach out to us for a quote or to discuss your custom job requests!</p>
+          <h3 class="text-2xl font-semibold text-center font-gothamBold text-[#4dc5e7]">KEVIN AND TYSON HERE, THE PROUD OWNERS OF DO IT ALL PROJECTS!</h3>
+          <p class="mt-4 text-gray-700 font-semibold text-lg ">We’re passionate about providing top-notch service and bringing a fresh perspective to the industry. With our combined skills and dedication, we handle everything from small repairs to major renovations. We’re here to make your home improvement projects stress-free and successful. Reach out to us for a quote or to discuss your custom job requests!</p>
         </div>
       </div>
     </div>
@@ -172,52 +172,52 @@
       <div class="container mx-auto px-6">
         <div class="w-full max-w-4xl mx-auto">
           <h2
-            class="text-4xl font-bold mb-6 text-black text-center lg:text-left"
+            class="text-4xl font-gothamBold mb-6 text-black text-center lg:text-left"
           >
             Get in Touch
           </h2>
           <div class="flex flex-col lg:flex-row justify-between mt-8">
             <div class="lg:w-1/2 mb-6 lg:mb-0">
-              <h3 class="text-2xl font-semibold text-[#4dc5e7]">KEVIN TOEWS</h3>
-              <p class="font-medium" >kevin@diaprojects.ca</p>
-              <p class="font-medium" >204.392.9104</p>
-              <h3 class="text-2xl font-semibold mt-4 text-[#4dc5e7]">
+              <h3 class="text-2xl font-gothamBold text-[#4dc5e7]">KEVIN TOEWS</h3>
+              <p class="font-semibold" >kevin@diaprojects.ca</p>
+              <p class="font-semibold" >204.392.9104</p>
+              <h3 class="text-2xl font-gothamBold mt-4 text-[#4dc5e7]">
                 TYSON BARKMAN
               </h3>
-              <p class="font-medium" >tyson@diaprojects.ca</p>
-              <p class="font-medium" >431.388.8302</p>
+              <p class="font-semibold" >tyson@diaprojects.ca</p>
+              <p class="font-semibold" >431.388.8302</p>
             </div>
-            <div class="lg:w-1/2">
-              <form action="#" method="POST" class="space-y-4">
-                <div class="flex space-x-4">
+            <div>
+              <form action="#" method="POST" class="flex p-3 md:p-0 flex-col gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
                   <input
                     type="text"
                     name="name"
                     placeholder="Name"
-                    class="flex-1 p-2 border border-gray-300 rounded"
+                    class="w-full sm:w-1/2 p-2 border border-gray-300"
                   />
                   <input
                     type="text"
                     name="phone"
                     placeholder="Phone Number"
-                    class="flex-1 p-2 border border-gray-300 rounded"
+                    class="w-full sm:w-1/2 p-2 border border-gray-300"
                   />
                 </div>
                 <input
                   type="email"
                   name="email"
                   placeholder="E-mail"
-                  class="w-full p-2 border border-gray-300 rounded"
+                  class="p-2 border border-gray-300 "
                 />
                 <textarea
                   name="message"
                   placeholder="Message"
-                  class="w-full p-2 border border-gray-300 rounded"
+                  class="p-2 border border-gray-300 "
                 ></textarea>
-                <div class="text-right">
+                <div class="text-center sm:text-right">
                   <button
                     type="submit"
-                    class="bg-[#4dc5e7] text-white py-2 px-4 rounded-md hover:bg-[#2d3a4f] transition-all"
+                    class="bg-[#4dc5e7] text-white w-full py-2 sm:py-2.5 sm:px-24 hover:bg-[#2d3a4f] transition-all"
                   >
                     SUBMIT
                   </button>
@@ -239,6 +239,6 @@
   <div class="footer-clip-path absolute top-0 left-0 w-full h-full z-0"></div>
 </footer>
 
-    <script src="app.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

@@ -3,12 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('Montserrat/Montserrat-VariableFont_wght.ttf')
-    format('truetype-variations');
-  font-weight: 100 900;
-  font-style: normal;
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('assets/fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 body,
 html {
@@ -66,7 +76,7 @@ img.unselectable {
       rgba(255, 255, 255, 0.5) 12.5%,
       rgba(255, 255, 255, 1) 40%
     ),
-    url('/assets/img/newPattern.svg');
+    url('assets/img/pattern.svg');
   background-size: cover;
   background-position: center;
 }
@@ -119,7 +129,7 @@ img.unselectable {
 }
 
 .review-section {
-  background-image: url('/assets/img/patternAlt.svg');
+  background-image: url('assets/img/patternAlt.svg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -135,7 +145,7 @@ img.unselectable {
   width: 25%; /* Adjust width as needed */
   height: 100%;
   background: #4dc5e7;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(75% 0, 100% 0, 100% 100%, 0 100%);
 }
 .review-section .content {
   max-width: 60%; /* Contain the text to the center */
@@ -145,6 +155,8 @@ img.unselectable {
 }
 .review-section .stars {
   color: #4dc5e7;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;  
 }
 .review-section .quote {
   font-size: 1.5rem;
@@ -158,10 +170,9 @@ img.unselectable {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 200px; /* Adjust width as needed */
+  width: 125px; /* Adjust width as needed */
   height: auto;
-  z-index: 2; /* Ensure the logo is above the blue section */
-  transform: translateX(50%); /* Move the logo to the right */
+  z-index: 2; /* Ensure the logo is above the blue section */  
 }
 
 #contact {
@@ -170,7 +181,7 @@ img.unselectable {
       rgba(255, 255, 255, 0.5) 12.5%,
       rgba(255, 255, 255, 1) 40%
     ),
-    url('/assets/img/pattern.svg');
+    url('assets/img/pattern.svg');
   background-size: cover;
   background-position: center;
 }
@@ -178,15 +189,6 @@ img.unselectable {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-form {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
 }
 
 .text-right {

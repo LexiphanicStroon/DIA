@@ -37,23 +37,26 @@ html {
 
 .unselectable {
   user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-img.unselectable {
-  user-drag: none;
-  user-select: none;
-  -webkit-user-drag: none; /* Safari */
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  -o-user-select: none;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
-#scroll-btn:hover {
-  transform: translateY(-5px);
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
 }
 
 .links:hover {
@@ -70,16 +73,7 @@ img.unselectable {
   background-size: cover;
   background-position: center;
 }
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.unselectable {
-  user-select: none;
-}
+
 .image-container {
   width: 250px;
   height: 350px;

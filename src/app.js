@@ -16,7 +16,7 @@ scrollContainer.addEventListener('mousedown', (e) => {
   scrollLeft = scrollContainer.scrollLeft;
 });
 
-scrollContainer.addEventListener('mouseleave', () => {
+document.addEventListener('mouseup', () => {
   isDown = false;
   scrollContainer.classList.remove('cursor-grabbing');
 });

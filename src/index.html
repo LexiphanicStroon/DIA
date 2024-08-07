@@ -21,7 +21,7 @@
     <script defer src="/_vercel/insights/script.js"></script>
     <title>DIA Projects</title>
   </head>
-  <body class="bg-black">
+  <body class="bg-black font-gothamBook">
     <div id="home" class="relative h-screen flex flex-col justify-between">
       <div
         id="particles-js"
@@ -31,7 +31,7 @@
         id="content"
         class="relative z-10 flex flex-col justify-between h-full"
       >
-        <nav id="top-nav">
+        <nav id="top-nav" class="hidden sm:block">
           <ul
             class="unselectable font-medium text-white font-montserrat flex gap-16 text-lg justify-center p-3"
           >
@@ -49,25 +49,31 @@
             </li>
           </ul>
         </nav>
-        <div class="flex-grow flex flex-col justify-center items-center">
-          <img
-            class="unselectable w-[450px]"
-            src="fullTextWolf.png"
-            alt="Logo"
-          />
-          <a
-            href="tel:204-381-3145"
-            class="text-electric-blue text-2xl font-medium mt-4 hover:text-white"
-            >204-955-1141</a
-          >
-          <a
-            href="mailto:info@diaprojects.ca"
-            class="text-electric-blue text-2xl font-medium mt-4 hover:text-white"
-            >Email Us</a
-          >
-        </div>
+   <!-- Floating Action Button for Mobile -->
+    <div class="fixed bottom-4 right-4 z-50 block sm:hidden">
+      <div id="menu" class="hidden flex flex-col items-end space-y-2 absolute bottom-16 right-0">
+        <a href="#home" class="bg-dark-blue text-white p-2 rounded-md hover:bg-gray-200 w-32 text-center">Home</a>
+        <a href="#services" class="bg-dark-blue text-white p-2 rounded-md hover:bg-gray-200 w-32 text-center">Services</a>
+        <a href="#about" class="bg-dark-blue text-white p-2 rounded-md hover:bg-gray-200 w-32 text-center">About</a>
+        <a href="#contact" class="bg-dark-blue text-white p-2 rounded-md hover:bg-gray-200 w-32 text-center">Contact</a>
       </div>
+      <button id="fab" class="bg-[#2d3a4f] p-4 rounded-full shadow-lg hover:bg-[#4dc5e7] transition-all focus:outline-none">
+        <svg id="fab-icon-open" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1z"/>
+          <path d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+        </svg>
+        <svg id="fab-icon-close" class="w-6 h-6 text-white hidden" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+        </svg>
+      </button>
     </div>
+    <div class="flex-grow flex flex-col justify-center items-center">
+      <img class="unselectable w-5/6 sm:w-[450px]" src="fullTextWolf.png" alt="Logo" />
+      <a href="tel:204-381-3145" class="text-electric-blue text-2xl font-medium mt-4 hover:text-white">204-955-1141</a>
+      <a href="mailto:info@diaprojects.ca" class="text-electric-blue text-2xl font-medium mt-4 hover:text-white">Email Us</a>
+    </div>
+  </div>
+</div>
     <section
       id="services"
       class="h-screen flex flex-col justify-center items-center bg-white text-white unselectable relative"
@@ -78,7 +84,7 @@
         </h2>
       </div>
       <div
-        class="w-full max-w-4xl overflow-x-auto flex space-x-6 scrollbar-hide py-10 px-6 cursor-grab"
+        class="w-full max-w-4xl overflow-x-auto flex space-x-6 scrollbar-hide py-4 sm:py-10 px-6 cursor-grab"
         id="scroll-container"
       >
         <div class="image-container flex-shrink-0">
@@ -136,109 +142,89 @@
           From minor repairs to custom projects, we handle it all with expertise
           and care.
         </p>
-        <button class="bg-electric-blue text-white px-3 py-2.5">
-          Get A Quote
-        </button>
       </div>
     </section>
 
     <section class="review-section relative bg-[#2d3a4f]">
       <div class="content">
-        <div class="stars">★★★★★</div>
-        <div class="quote">
+        <div class="stars font-bold">★★★★★</div>
+        <div class="quote font-medium">
           I couldn’t be happier with the landscaping job Kevin and Tyson
           provided! They were professional and efficient, and I’ll definitely be
           calling them again for future projects.
         </div>
         <div class="author">- M. FRIESEN</div>
       </div>
-      <img src="assets/img/navyWolf.png" alt="Logo" class="logo" />
+      <img src="assets/halfWolf.png" alt="Logo" class="logo" />
     </section>
-    <!-- about section -->
-    <section id="about" class="bg-white py-10">
-      <div class="container mx-auto px-6">
-        <div class="w-full max-w-4xl mx-auto">
-          <h2 class="text-4xl font-bold mb-6 text-[#2d3a4f] text-left">
-            About Us
-          </h2>
-          <div class="flex flex-col lg:flex-row justify-between items-start">
-            <div class="flex flex-col items-start lg:w-1/2">
-              <img
-                src="assets/img/fullText.png"
-                alt="About Us"
-                class="w-full max-w-md lg:mb-0"
-              />
-            </div>
-            <div class="lg:w-1/2 lg:pl-6">
-              <h3 class="text-2xl font-semibold text-[#4dc5e7]">
-                KEVIN AND TYSON HERE, THE PROUD OWNERS OF DO IT ALL PROJECTS!
-              </h3>
-              <p class="mt-4 text-gray-700 font-medium text-lg">
-                We’re passionate about providing top-notch service and bringing
-                a fresh perspective to the industry. With our combined skills
-                and dedication, we handle everything from small repairs to major
-                renovations. We’re here to make your home improvement projects
-                stress-free and successful. Reach out to us for a quote or to
-                discuss your custom job requests!
-              </p>
-            </div>
-          </div>
+<!-- about section -->
+<section id="about" class="bg-white py-10">
+  <div class="container mx-auto px-6">
+    <div class="w-full max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6 text-[#2d3a4f] text-left">About Us</h2>
+      <div class="flex flex-col lg:flex-row justify-between items-start">
+        <div class="flex flex-col items-start lg:w-1/2">
+          <img src="assets/img/fullText.png" alt="About Us" class="w-full max-w-md lg:mb-0">
+        </div>
+        <div class="lg:w-1/2 lg:pl-6">
+          <h3 class="text-2xl font-semibold text-[#4dc5e7]">KEVIN AND TYSON HERE, THE PROUD OWNERS OF DO IT ALL PROJECTS!</h3>
+          <p class="mt-4 text-gray-700 font-medium text-lg">We’re passionate about providing top-notch service and bringing a fresh perspective to the industry. With our combined skills and dedication, we handle everything from small repairs to major renovations. We’re here to make your home improvement projects stress-free and successful. Reach out to us for a quote or to discuss your custom job requests!</p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- contact section -->
     <section id="contact" class="bg-white py-10">
       <div class="container mx-auto px-6">
         <div class="w-full max-w-4xl mx-auto">
           <h2
-            class="text-4xl font-bold mb-6 text-black text-center lg:text-left"
+            class="text-4xl font-gothamBold mb-6 text-black text-center lg:text-left"
           >
             Get in Touch
           </h2>
           <div class="flex flex-col lg:flex-row justify-between mt-8">
             <div class="lg:w-1/2 mb-6 lg:mb-0">
-              <h3 class="text-2xl font-semibold text-[#4dc5e7]">
-                BRONSON PRITCHETT
-              </h3>
-              <p class="font-medium">kevin@diaprojects.ca</p>
-              <p class="font-medium">204.392.9104</p>
+              <h3 class="text-2xl font-semibold text-[#4dc5e7]">KEVIN TOEWS</h3>
+              <p class="font-medium" >kevin@diaprojects.ca</p>
+              <p class="font-medium" >204.392.9104</p>
               <h3 class="text-2xl font-semibold mt-4 text-[#4dc5e7]">
                 TYSON BARKMAN
               </h3>
-              <p class="font-medium">tyson@diaprojects.ca</p>
-              <p class="font-medium">431.388.8302</p>
+              <p class="font-medium" >tyson@diaprojects.ca</p>
+              <p class="font-medium" >431.388.8302</p>
             </div>
-            <div class="lg:w-1/2">
-              <form action="#" method="POST" class="space-y-4">
-                <div class="flex space-x-4">
+            <div>
+              <form action="#" method="POST" class="flex p-3 md:p-0 flex-col gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
                   <input
                     type="text"
                     name="name"
                     placeholder="Name"
-                    class="flex-1 p-2 border border-gray-300 rounded"
+                    class="w-full sm:w-1/2 p-2 border border-gray-300"
                   />
                   <input
                     type="text"
                     name="phone"
                     placeholder="Phone Number"
-                    class="flex-1 p-2 border border-gray-300 rounded"
+                    class="w-full sm:w-1/2 p-2 border border-gray-300"
                   />
                 </div>
                 <input
                   type="email"
                   name="email"
                   placeholder="E-mail"
-                  class="w-full p-2 border border-gray-300 rounded"
+                  class="p-2 border border-gray-300 "
                 />
                 <textarea
                   name="message"
                   placeholder="Message"
-                  class="w-full p-2 border border-gray-300 rounded"
+                  class="p-2 border border-gray-300 "
                 ></textarea>
-                <div class="text-right">
+                <div class="text-center sm:text-right">
                   <button
                     type="submit"
-                    class="bg-[#4dc5e7] text-white py-2 px-4 rounded-md hover:bg-[#2d3a4f] transition-all"
+                    class="bg-[#4dc5e7] text-white w-full py-2 sm:py-2.5 sm:px-24 hover:bg-[#2d3a4f] transition-all"
                   >
                     SUBMIT
                   </button>
@@ -251,23 +237,15 @@
     </section>
     <!-- end contact section -->
 
-    <!-- Footer -->
-    <footer class="footer bg-[#2d3a4f] relative py-10">
-      <div class="container mx-auto px-6 flex justify-between items-center">
-        <img
-          src="assets/img/whitePill.png"
-          alt="Do It All Projects"
-          class="h-16"
-        />
-        <span class="text-white text-sm"
-          >© 2024 Do It All Projects. All rights reserved.</span
-        >
-      </div>
-      <div
-        class="footer-clip-path absolute top-0 left-0 w-full h-full z-0"
-      ></div>
-    </footer>
+<!-- Footer -->
+<footer class="footer bg-[#2d3a4f] relative py-10">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <img src="assets/img/whitePill.png" alt="Do It All Projects" class="h-16">
+    <span class="text-white text-sm">© 2024 Do It All Projects. All rights reserved.</span>
+  </div>
+  <div class="footer-clip-path absolute top-0 left-0 w-full h-full z-0"></div>
+</footer>
 
-    <script src="app.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

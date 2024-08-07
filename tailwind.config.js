@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        gothamBold: ['Gotham', 'sans-serif'],
+        gothamBook: ['Gotham Book', 'sans-serif'],
       },
       colors: {
         'electric-blue': '#45c7ea',

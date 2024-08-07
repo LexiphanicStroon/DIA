@@ -3,11 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('Montserrat/Montserrat-VariableFont_wght.ttf')
-    format('truetype-variations');
-  font-weight: 100 900;
-  font-style: normal;
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('assets/fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body,
@@ -16,6 +28,7 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
+  
 }
 
 #particles-js {
@@ -69,9 +82,33 @@ html {
       rgba(255, 255, 255, 0.5) 12.5%,
       rgba(255, 255, 255, 1) 40%
     ),
-    url('/assets/img/newPattern.svg');
+    url('assets/img/pattern.svg');
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 640px) {
+  #services {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 12.5%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('assets/img/pattern.svg');
+  background-size: cover;
+  background-position: center;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.unselectable {
+  user-select: none;
 }
 
 .image-container {
@@ -79,6 +116,7 @@ html {
   height: 350px;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .image-container img {
   width: 100%;
@@ -112,8 +150,16 @@ html {
   z-index: 2;
 }
 
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .image-container {
+    width: 200px;
+    height: 280px;
+  }
+}
+
 .review-section {
-  background-image: url('/assets/img/patternAlt.svg');
+  background-image: url('assets/img/patternAlt.svg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -129,7 +175,7 @@ html {
   width: 25%; /* Adjust width as needed */
   height: 100%;
   background: #4dc5e7;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(75% 0, 100% 0, 100% 100%, 0 100%);
 }
 .review-section .content {
   max-width: 60%; /* Contain the text to the center */
@@ -139,6 +185,8 @@ html {
 }
 .review-section .stars {
   color: #4dc5e7;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;  
 }
 .review-section .quote {
   font-size: 1.5rem;
@@ -152,19 +200,33 @@ html {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 200px; /* Adjust width as needed */
+  width: 125px; /* Adjust width as needed */
   height: auto;
-  z-index: 2; /* Ensure the logo is above the blue section */
-  transform: translateX(50%); /* Move the logo to the right */
+  z-index: 2; /* Ensure the logo is above the blue section */  
 }
 
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+  .review-section .content {
+    max-width: 90%; /* Increase the max-width on mobile */
+    padding: 0 1rem; /* Add some padding for better readability */
+  }
+  .review-section::before {
+    width: 50%; /* Adjust width for better visibility on mobile */
+    clip-path: polygon(160% 0, 100% 0, 100% 100%, 35% 100%);
+  }
+  .review-section .logo {
+     
+    width: 70px; /* Adjust width for better fit */
+  }
+}
 #contact {
   background-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.5) 12.5%,
       rgba(255, 255, 255, 1) 40%
     ),
-    url('/assets/img/pattern.svg');
+    url('assets/img/pattern.svg');
   background-size: cover;
   background-position: center;
 }
@@ -172,15 +234,6 @@ html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-form {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
 }
 
 .text-right {
@@ -205,7 +258,6 @@ form {
 }
 
 #about h2 {
-  text-align: left;
   margin-bottom: 1.5rem; /* Add margin for better spacing */
 }
 
@@ -217,6 +269,39 @@ form {
 #about p {
   color: #4a4a4a;
   line-height: 1.6; /* Improve readability */
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 640px) {
+  #about {
+    padding: 40px 10px; /* Adjust padding for mobile */
+  }
+  
+  #about .container {
+    max-width: 100%; /* Allow the container to take full width on mobile */
+    padding: 0 1rem; /* Add padding for better spacing */
+  }
+
+  #about img {
+    max-width: 100%; /* Ensure the image takes full width on mobile */
+    margin-bottom: 1rem; /* Add margin below the image */
+  }
+
+  #about h2, #about h3, #about p {
+    text-align: center; /* Center align text for better readability on mobile */
+  }
+
+  #about h2 {
+    font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  #about h3 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  #about p {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
 }
 
 @media (min-width: 1024px) {
@@ -232,6 +317,7 @@ form {
     padding-left: 2rem; /* Ensure text has enough space */
   }
 }
+
 
 .footer {
   background-color: #2d3a4f;

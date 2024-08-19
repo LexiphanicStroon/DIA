@@ -14,20 +14,36 @@ scrollContainer.addEventListener('mousedown', (e) => {
   scrollContainer.classList.add('active');
   startX = e.pageX - scrollContainer.offsetLeft;
   scrollLeft = scrollContainer.scrollLeft;
+  gsap.to(scrollContainer, { duration: 0, cursor: 'grabbing' });
 });
 
 document.addEventListener('mouseup', () => {
   isDown = false;
   scrollContainer.classList.remove('active');
+  gsap.to(scrollContainer, { duration: 0, cursor: 'grab' });
 });
 
 document.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - scrollContainer.offsetLeft;
-  const walk = (x - startX) * 2; //scroll-fast
-  scrollContainer.scrollLeft = scrollLeft - walk;
+  const walk = (x - startX) * 1.7; // scroll speed multiplier
+
+  gsap.to(scrollContainer, {
+    scrollLeft: scrollLeft - walk,
+    duration: 0.5, // duration of the smooth scroll
+    ease: 'power3.out', // easing for the smooth scroll
+  });
 });
+
+scrollContainer.addEventListener('mouseleave', () => {
+  if (isDown) {
+    isDown = false;
+    scrollContainer.classList.remove('active');
+    gsap.to(scrollContainer, { duration: 0, cursor: 'grab' });
+  }
+});
+
 
 document.getElementById('fab').addEventListener('click', function () {
   document.getElementById('menu').classList.toggle('hidden');

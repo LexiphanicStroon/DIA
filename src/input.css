@@ -67,6 +67,11 @@ body {
   align-items: center;
 }
 
+  #scroll-container {
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
+
 .image {
   flex-shrink: 0;
   height: 80%;

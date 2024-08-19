@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>DIA Projects</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/Draggable.min.js"></script>
+</head>
+<body class="bg-black font-gothamBook">
+  <div id="home" class="relative h-screen flex flex-col justify-between">
+    <div id="particles-js" class="absolute w-full h-full top-0 left-0 z-0"></div>
+    <div id="content" class="relative z-10 flex flex-col justify-between h-full">
+      <nav id="top-nav" class="hidden sm:block">
+        <ul class="unselectable font-medium text-white font-montserrat flex gap-16 text-lg justify-center p-3">
+          <li><a class="hover:text-electric-blue" href="#home">Home</a></li>
+          <li><a class="hover:text-electric-blue" href="#services">Services</a></li>
+          <li><a class="hover:text-electric-blue" href="#about">About</a></li>
+          <li><a class="hover:text-electric-blue" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex-grow flex flex-col justify-center items-center">
+        <img class="unselectable w-5/6 sm:w-[450px]" src="fullTextWolf.png" alt="Logo" />
+        <a href="tel:204-381-3145" class="text-electric-blue text-2xl font-medium mt-4 hover:text-white">204-955-1141</a>
+        <a href="mailto:info@diaprojects.ca" class="text-electric-blue text-2xl font-medium mt-4 hover:text-white">Email Us</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="h-screen flex flex-col justify-center items-center bg-white text-white unselectable relative">
+    <div class="w-full max-w-4xl px-6">
+      <h2 class="text-5xl font-bold mb-2 text-[#2d3a4f] text-center">Services</h2>
+    </div>
+    <div id="gallery" class="w-full max-w-4xl overflow-x-auto flex space-x-6 scrollbar-hide py-4 sm:py-10 px-6 cursor-grab">
+      <div id="scroller" class="flex">
+        <div class="image">
+          <img width="1280" height="720" src="http://via.placeholder.com/1280x720" />
+        </div>
+        <div class="image">
+          <img width="640" height="360" src="http://via.placeholder.com/640x360" />
+        </div>
+        <div class="image">
+          <img width="720" height="1280" src="http://via.placeholder.com/720x1280" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+        <div class="image">
+          <img width="640" height="120" src="http://via.placeholder.com/640x120" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+        <div class="image">
+          <img width="1280" height="720" src="http://via.placeholder.com/1280x720" />
+        </div>
+        <div class="image">
+          <img width="640" height="360" src="http://via.placeholder.com/640x360" />
+        </div>
+        <div class="image">
+          <img width="720" height="1280" src="http://via.placeholder.com/720x1280" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+        <div class="image">
+          <img width="640" height="120" src="http://via.placeholder.com/640x120" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+        <div class="image">
+          <img width="1280" height="720" src="http://via.placeholder.com/1280x720" />
+        </div>
+        <div class="image">
+          <img width="640" height="360" src="http://via.placeholder.com/640x360" />
+        </div>
+        <div class="image">
+          <img width="720" height="1280" src="http://via.placeholder.com/720x1280" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+        <div class="image">
+          <img width="640" height="120" src="http://via.placeholder.com/640x120" />
+        </div>
+        <div class="image">
+          <img width="360" height="640" src="http://via.placeholder.com/360x640" />
+        </div>
+      </div>
+    </div>
+    <div class="text-center flex flex-col items-center gap-4 mt-4 p-4 sm:p-0">
+      <div>
+        <h2 class="text-2xl font-bold font-gothamBold mb-2 text-[#4dc5e7]">CONTACT US TODAY FOR A FREE QUOTE</h2>
+        <p class="max-w-xl mx-auto text-gray-900 text-lg font-semibold">
+          Discover how we can tailor our services to meet your specific needs! From minor repairs to custom projects, we handle it all with expertise and care.
+        </p>
+      </div>
+      <a href="#contact" class="bg-electric-blue px-4 py-2.5 font-semibold font-gothamBook">Contact Us</a>
+    </div>
+  </section>
+  <script src="gsapGallery.js"></script>
+</body>
+</html>

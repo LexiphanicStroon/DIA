@@ -54,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 4.5,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -82,7 +82,7 @@
     },
     "modes": {
       "grab": {
-        "distance": 600,
+        "distance": 200,
         "line_linked": {
           "opacity": 0.8,
           "color": "#000000"

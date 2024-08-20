@@ -3,98 +3,138 @@ particlesJS.load('particles-js', 'particles.json', function () {
   console.log('callback - particles.js config loaded');
 });
 
-  // Preload Images Function
-  function preloadImages(urls, allImagesLoadedCallback){
-    let count = 0;
-    const total = urls.length;
+const scrollContainer = document.getElementById('scroll-container');
 
-    const checkIfAllImagesAreLoaded = () => {
-      count++;
-      if(count === total){
-        allImagesLoadedCallback();
-      }
-    };
+let isDown = false;
+let startX;
+let scrollLeft;
+let isAnimating = false;
 
-    urls.forEach(url => {
-      const img = new Image();
-      img.src = url;
-      img.onload = checkIfAllImagesAreLoaded;
-      img.onerror = checkIfAllImagesAreLoaded; // Handle errors gracefully
-    });
-  }
-
-  // List of image URLs to preload
-  const imageUrls = [
-    "assets/img/insul.jpg",
-    "assets/img/backyard.jpg",
-    "assets/img/shed.jpg",
-    "assets/img/deck2.jpg",
-    "assets/img/tiles2.jpg",
-    "assets/img/renos2.jpg",
-    "assets/img/fence.jpg",
-    "assets/img/electric.jpg"
-  ];
-
-  // GSAP Warm-up (Performs a trivial animation to ensure GSAP is ready)
-  gsap.to({}, {duration: 0.1});
-
-  // After images are preloaded, enable the scroll functionality
-  preloadImages(imageUrls, () => {
-    console.log('All images are preloaded');
-    // Scroll Container Logic
-    const scrollContainer = document.getElementById('scroll-container');
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Trigger a small scroll on load to warm up browser rendering
-    window.addEventListener('load', () => {
-      scrollContainer.scrollLeft += 1;
-      scrollContainer.scrollLeft -= 1;
-    });
-
-    // Mouse down event to start scrolling
-    scrollContainer.addEventListener('mousedown', (e) => {
-      isDown = true;
-      scrollContainer.classList.add('active');
-      startX = e.pageX - scrollContainer.offsetLeft;
-      scrollLeft = scrollContainer.scrollLeft;
-      gsap.to(scrollContainer, {duration: 0, cursor: 'grabbing'});
-
-      // Force a repaint by manipulating the DOM
-      scrollContainer.style.display = 'none';
-      scrollContainer.offsetHeight; // forces repaint
-      scrollContainer.style.display = 'block';
-    });
-
-    // Mouse up event to stop scrolling
-    document.addEventListener('mouseup', () => {
-      isDown = false;
-      scrollContainer.classList.remove('active');
-      gsap.to(scrollContainer, {duration: 0, cursor: 'grab'});
-    });
-
-    // Mouse move event for scrolling
-    document.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - scrollContainer.offsetLeft;
-      const walk = (x - startX) * 1.5; // scroll speed multiplier
-
+// Function to handle smooth scroll with GSAP, using requestAnimationFrame
+function smoothScroll(x) {
+  if (!isAnimating) {
+    isAnimating = true;
+    requestAnimationFrame(() => {
       gsap.to(scrollContainer, {
-        scrollLeft: scrollLeft - walk,
+        scrollLeft: scrollLeft - x,
         duration: 0.5, // duration of the smooth scroll
-        ease: "power3.out" // easing for the smooth scroll
+        ease: 'power3.out', // easing for the smooth scroll
+        onComplete: () => {
+          isAnimating = false;
+        },
       });
     });
+  }
+}
 
-    // Mouse leave event to stop scrolling
-    scrollContainer.addEventListener('mouseleave', () => {
-      if (isDown) {
-        isDown = false;
-        scrollContainer.classList.remove('active');
-        gsap.to(scrollContainer, {duration: 0, cursor: 'grab'});
+scrollContainer.addEventListener('mousedown', (e) => {
+  isDown = true;
+  scrollContainer.classList.add('active');
+  startX = e.pageX - scrollContainer.offsetLeft;
+  scrollLeft = scrollContainer.scrollLeft;
+  gsap.to(scrollContainer, { duration: 0, cursor: 'grabbing' });
+});
+
+document.addEventListener('mouseup', () => {
+  isDown = false;
+  scrollContainer.classList.remove('active');
+  gsap.to(scrollContainer, { duration: 0, cursor: 'grab' });
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - scrollContainer.offsetLeft;
+  const walk = (x - startX) * 1.7; // scroll speed multiplier
+
+  smoothScroll(walk); // Use the smoothScroll function to optimize
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+  if (isDown) {
+    isDown = false;
+    scrollContainer.classList.remove('active');
+    gsap.to(scrollContainer, { duration: 0, cursor: 'grab' });
+  }
+});
+
+document.getElementById('fab').addEventListener('click', function () {
+  document.getElementById('menu').classList.toggle('hidden');
+  document.getElementById('fab-icon-open').classList.toggle('hidden');
+  document.getElementById('fab-icon-close').classList.toggle('hidden');
+});
+
+// Add smooth scrolling for menu items
+document.querySelectorAll('#menu a').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+    // Close the menu after clicking
+    document.getElementById('menu').classList.add('hidden');
+    document.getElementById('fab-icon-open').classList.remove('hidden');
+    document.getElementById('fab-icon-close').classList.add('hidden');
+  });
+});
+
+// Intersection Observer to change menu item color based on the section
+const sections = document.querySelectorAll('#home, section');
+const fabMenuItems = document.querySelectorAll('#menu a');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Reset all menu items to default color
+        fabMenuItems.forEach((item) => {
+          item.classList.remove('bg-electric-blue');
+          item.classList.add('bg-dark-blue');
+        });
+
+        // Change the color of the active menu item based on the section in view
+        switch (entry.target.id) {
+          case 'home':
+            document
+              .querySelector('#menu a[href="#home"]')
+              .classList.remove('bg-dark-blue');
+            document
+              .querySelector('#menu a[href="#home"]')
+              .classList.add('bg-electric-blue');
+            break;
+          case 'services':
+            document
+              .querySelector('#menu a[href="#services"]')
+              .classList.remove('bg-dark-blue');
+            document
+              .querySelector('#menu a[href="#services"]')
+              .classList.add('bg-electric-blue');
+            break;
+          case 'about':
+            document
+              .querySelector('#menu a[href="#about"]')
+              .classList.remove('bg-dark-blue');
+            document
+              .querySelector('#menu a[href="#about"]')
+              .classList.add('bg-electric-blue');
+            break;
+          case 'contact':
+            document
+              .querySelector('#menu a[href="#contact"]')
+              .classList.remove('bg-dark-blue');
+            document
+              .querySelector('#menu a[href="#contact"]')
+              .classList.add('bg-electric-blue');
+            break;
+        }
       }
     });
-  });
+  },
+  {
+    threshold: 0.5, // Adjust the threshold as needed
+  }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});

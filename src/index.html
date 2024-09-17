@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <script src="particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <link rel="stylesheet" href="build.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -134,11 +135,17 @@
         id="scroll-container"
       >
         <div class="image-container">
-          <img src="assets/img/insul.jpg" alt="Insulation" draggable="false" />
+          <img
+            loading="eager"
+            src="assets/insul-min.jpg"
+            alt="Insulation"
+            draggable="false"
+          />
           <p class="font-bold">Insulation</p>
         </div>
         <div class="image-container">
           <img
+            loading="eager"
             src="assets/img/backyard.jpg"
             alt="Lawn Care"
             draggable="false"
@@ -146,32 +153,54 @@
           <p class="font-bold">Lawn Care</p>
         </div>
         <div class="image-container">
-          <img src="assets/img/shed.jpg" alt="Sheds" draggable="false" />
+          <img
+            loading="eager"
+            src="assets/shed-min.jpg"
+            alt="Sheds"
+            draggable="false"
+          />
           <p class="font-bold">Sheds</p>
         </div>
         <div class="image-container">
-          <img src="assets/img/deck2.jpg" alt="Decks" draggable="false" />
+          <img
+            loading="eager"
+            src="assets/deck2-min.jpg"
+            alt="Decks"
+            draggable="false"
+          />
           <p class="font-bold">Decks</p>
         </div>
         <div class="image-container">
-          <img src="assets/img/tiles2.jpg" alt="Additions" draggable="false" />
+          <img
+            loading="eager"
+            src="assets/tiles2-min.jpg"
+            alt="Additions"
+            draggable="false"
+          />
           <p class="font-bold">Additions</p>
         </div>
         <div class="image-container">
           <img
-            src="assets/img/renos2.jpg"
+            loading="eager"
+            src="assets/renos2-min.jpg"
             alt="Renovations"
             draggable="false"
           />
           <p class="font-bold">Renovations</p>
         </div>
         <div class="image-container">
-          <img src="assets/img/fence.jpg" alt="Fences" draggable="false" />
+          <img
+            loading="eager"
+            src="assets/fence-min.jpg"
+            alt="Fences"
+            draggable="false"
+          />
           <p class="font-bold">Fences</p>
         </div>
         <div class="image-container">
           <img
-            src="assets/img/electric.jpg"
+            loading="eager"
+            src="assets/electric-min.jpg"
             alt="Electrical"
             draggable="false"
           />
@@ -230,17 +259,20 @@
               <h3
                 class="text-2xl font-semibold text-center lg:text-left font-gothamBold text-[#4dc5e7]"
               >
-                KEVIN AND TYSON HERE, THE PROUD OWNERS OF DO IT ALL PROJECTS!
+                About Us
               </h3>
               <p
                 class="mt-4 text-gray-700 font-semibold text-lg text-center lg:text-left"
               >
-                We’re passionate about providing top-notch service and bringing
-                a fresh perspective to the industry. With our combined skills
-                and dedication, we handle everything from small repairs to major
-                renovations. We’re here to make your home improvement projects
-                stress-free and successful. Reach out to us for a quote or to
-                discuss your custom job requests!
+                The four partners here at DIA believe that every project, no
+                matter the size, deserves the same level of care and attention.
+                Community and outreach are central to our values, and we’re
+                committed to making a positive impact in the areas we serve.
+                Whether it’s a major construction endeavor or a smaller task, we
+                approach each with the same professionalism and dedication,
+                ensuring that every job is completed to the highest standard.
+                Reach out to us for a quote or to discuss your custom job
+                requests!
               </p>
             </div>
           </div>
@@ -260,15 +292,15 @@
           <div class="flex flex-col lg:flex-row justify-between mt-8">
             <div class="lg:w-1/2 mb-6 lg:mb-0 text-center sm:text-left">
               <h3 class="text-2xl font-gothamBold text-[#4dc5e7]">
-                BRONSON PRITCHETT
+                DIA Projects
               </h3>
-              <p class="font-semibold">bronson@diaprojects.ca</p>
-              <p class="font-semibold">204.392.9104</p>
+              <a href="mailto:info@diaprojects.ca" class="font-semibold">info@diaprojects.ca</a>
+              <p class="font-semibold">204.955.1141</p>
               <h3 class="text-2xl font-gothamBold mt-4 text-[#4dc5e7]">
-                TYSON BARKMAN
+                Level-Up Electrical<br>Kelly Unrau
               </h3>
-              <p class="font-semibold">tyson@diaprojects.ca</p>
-              <p class="font-semibold">431.388.8302</p>
+              <a href="mailto:kelly@levelupelectrical.ca" class="font-semibold">kelly@levelupelectrical.ca</a>
+              <p class="font-semibold">204.392.7094</p>
             </div>
             <div>
               <form

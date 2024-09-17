@@ -1,6 +1,8 @@
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', 'particles.json', function () {
-  console.log('callback - particles.js config loaded');
+document.addEventListener('DOMContentLoaded', () => {
+  particlesJS.load('particles-js', 'particles.json', function () {
+    console.log('Particles.js config loaded');
+  });
 });
 
 const scrollContainer = document.getElementById('scroll-container');

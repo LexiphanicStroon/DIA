@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/Gotham-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gotham Book';
-    src: url('assets/fonts/Gotham-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Gotham Book';
+  src: url('assets/fonts/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body,
@@ -24,11 +24,6 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 #particles-js {
@@ -38,6 +33,10 @@ html {
   top: 0;
   left: 0;
   z-index: 0;
+  pointer-events: none;
+}
+
+#home:hover #particles-js {
   pointer-events: all;
 }
 
@@ -47,45 +46,6 @@ html {
   color: white;
   text-align: center;
 }
-
-body {
-  overflow-x: hidden;
-  margin: 0;
-}
-
-#gallery {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background-color: pink;
-}
-
-#scroller {
-  background-color: red;
-  display: flex;
-  height: 100%;
-  align-items: center;
-}
-
-  #scroll-container {
-    transform: translateZ(0);
-    will-change: scroll-position;
-  }
-
-.image {
-  flex-shrink: 0;
-  height: 80%;
-  margin-right: 2rem;
-  align-items: center;
-  background-color: blue;
-}
-
-.image > img {
-  height: 70%;
-  width: 100%;
-  object-fit: contain;
-}
-
 
 .unselectable {
   user-select: none;
@@ -99,16 +59,8 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
-}
-
-.cursor-grab {
-  cursor: grab;
-}
-
-.cursor-grabbing {
-  cursor: grabbing;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .links:hover {
@@ -128,14 +80,14 @@ body {
 
 @media (max-width: 640px) {
   #services {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.5) 12.5%,
-      rgba(255, 255, 255, 1) 100%
-    ),
-    url('assets/img/pattern.svg');
-  background-size: cover;
-  background-position: center;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5) 12.5%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url('assets/img/pattern.svg');
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -203,7 +155,7 @@ body {
   width: 25%; /* Adjust width as needed */
   height: 100%;
   background: #4dc5e7;
-   clip-path: polygon(75% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(75% 0, 100% 0, 100% 100%, 0 100%);
 }
 .review-section .content {
   max-width: 60%; /* Contain the text to the center */
@@ -214,7 +166,7 @@ body {
 .review-section .stars {
   color: #4dc5e7;
   font-size: 2rem;
-  letter-spacing: 0.5rem;  
+  letter-spacing: 0.5rem;
 }
 .review-section .quote {
   font-size: 1.5rem;
@@ -230,7 +182,7 @@ body {
   right: 0;
   width: 125px; /* Adjust width as needed */
   height: auto;
-  z-index: 2; /* Ensure the logo is above the blue section */  
+  z-index: 2; /* Ensure the logo is above the blue section */
 }
 
 /* Media query for mobile devices */
@@ -244,7 +196,6 @@ body {
     clip-path: polygon(160% 0, 100% 0, 100% 100%, 35% 100%);
   }
   .review-section .logo {
-     
     width: 70px; /* Adjust width for better fit */
   }
 }
@@ -281,7 +232,7 @@ body {
 
 #about img {
   max-width: 100%;
-  height: auto;  
+  height: auto;
   max-width: 350px; /* Set a max-width for better alignment */
 }
 
@@ -304,7 +255,7 @@ body {
   #about {
     padding: 40px 10px; /* Adjust padding for mobile */
   }
-  
+
   #about .container {
     max-width: 100%; /* Allow the container to take full width on mobile */
     padding: 0 1rem; /* Add padding for better spacing */
@@ -315,7 +266,9 @@ body {
     margin-bottom: 1rem; /* Add margin below the image */
   }
 
-  #about h2, #about h3, #about p {
+  #about h2,
+  #about h3,
+  #about p {
     text-align: center; /* Center align text for better readability on mobile */
   }
 
@@ -345,7 +298,6 @@ body {
     padding-left: 2rem; /* Ensure text has enough space */
   }
 }
-
 
 .footer {
   background-color: #2d3a4f;

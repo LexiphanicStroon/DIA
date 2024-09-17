@@ -49,22 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
-      // Remove the active color from all menu items
+      
       menuItems.forEach((item) => {
         item.classList.remove('bg-electric-blue');
         item.classList.add('bg-dark-blue');
       });
 
-      // Add the active color to the clicked menu item
+      
       this.classList.remove('bg-dark-blue');
       this.classList.add('bg-electric-blue');
 
-      // Scroll to the section
+      
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
       });
 
-      // Close the menu after clicking (for mobile)
+      
       document.getElementById('menu').classList.add('hidden');
       document.getElementById('fab-icon-open').classList.remove('hidden');
       document.getElementById('fab-icon-close').classList.add('hidden');

@@ -4,7 +4,48 @@
     <meta charset="UTF-8" />
     <script defer src="particles.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="build.css" />
+    <meta
+      name="description"
+      content="DIA Projects provides expert home improvement services including insulation, lawn care, sheds, decks, and more. Contact us for a free quote."
+    />
+    <meta
+      name="keywords"
+      content="home improvement, insulation, lawn care, decks, sheds, renovations, electrical services"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="DIA Projects: Home Improvement Services"
+    />
+    <meta
+      property="og:description"
+      content="DIA Projects offers home improvement services including insulation, lawn care, sheds, decks, and more. Contact us today."
+    />
+    <meta
+      property="og:image"
+      content="https://diaprojects.ca/assets/img/fullTextWolf.png"
+    />
+    <meta property="og:url" content="https://diaprojects.ca" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="DIA Projects: Home Improvement Services"
+    />
+    <meta
+      name="twitter:description"
+      content="Contact DIA Projects for expert home improvement services in insulation, lawn care, decks, sheds, and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://diaprojects.ca/assets/img/fullTextWolf.png"
+    />
+
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+
     <title>DIA Projects</title>
   </head>
   <body class="bg-black font-gothamBook">
@@ -17,24 +58,6 @@
         id="content"
         class="relative z-10 flex flex-col justify-between h-full"
       >
-        <nav id="top-nav" class="hidden sm:block">
-          <ul
-            class="unselectable font-medium text-white font-montserrat flex gap-16 text-lg justify-center p-3"
-          >
-            <li>
-              <a class="hover:text-electric-blue" href="#home">Home</a>
-            </li>
-            <li>
-              <a class="hover:text-electric-blue" href="#services">Services</a>
-            </li>
-            <li>
-              <a class="hover:text-electric-blue" href="#about">About</a>
-            </li>
-            <li>
-              <a class="hover:text-electric-blue" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
         <!-- Floating Action Button for Mobile -->
         <div class="fixed bottom-4 right-4 z-50 block sm:hidden">
           <div
@@ -87,28 +110,32 @@
             </svg>
           </button>
         </div>
-        <div class="flex-grow flex flex-col justify-center items-center">
-          <img
-            class="unselectable w-5/6 sm:w-[450px]"
-            src="/assets/img/fullTextWolf.png"
-            alt="Logo"
-          />
-          <div
-            class="flex items-center text-3xl font-semibold gap-3 mt-4 text-white"
-          >
-            <a href="tel:204-381-3145" class="hover:text-electric-blue"
-              >204-955-1141</a
-            >
-            <p class="">|</p>
-            <a
-              href="mailto:info@diaprojects.ca"
-              class="hover:text-electric-blue"
-              >Email Us</a
-            >
-          </div>
-        </div>
+       <div class="flex-grow flex flex-col justify-center items-center">
+  <div class="flex items-center gap-x-6 sm:gap-x-12 flex-wrap mt-4"> 
+    <img
+      class="unselectable w-[100px] sm:w-[180px]"
+      src="assets/img/wolf.png"
+      alt="Logo"
+    />
+    <div class="flex flex-col justify-center items-center text-center lg:text-3xl font-semibold gap-3 mt-4 text-white">
+      <img class="w-[200px] sm:w-[400px] lg:w-[500px]" src="assets/img/fullPill.png" alt="">
+      <div class="flex gap-x-2 sm:gap-x-6 flex-wrap">
+        <a href="tel:204-381-3145" class="hover:text-electric-blue text-xs sm:text-base lg:text-lg">204.955.1141</a>
+        <p>|</p>
+        <a href="mailto:info@diaprojects.ca" class="hover:text-electric-blue text-xs sm:text-base lg:text-lg">EMAIL US</a>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="w-full flex justify-between flex-wrap mt-8 sm:mt-12">
+  <img src="assets/img/left-rect.png" class="w-12 sm:w-48" alt="">
+  <div class="flex flex-col p-3 sm:p-6 w-full sm:w-auto items-center sm:items-end justify-center text-center sm:text-right mr-0 sm:mr-12">
+    <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold">QUALITY SOLUTIONS FOR</h2>
+    <h1 class="text-electric-blue text-3xl sm:text-6xl lg:text-7xl font-semibold">Home Improvement</h1>
+  </div>
+  <img src="assets/img/right-rect.png" class="w-12 sm:w-48" alt="">
+</div>
     <section
       id="services"
       class="h-screen flex flex-col justify-center items-center bg-white text-white unselectable relative"
@@ -206,16 +233,18 @@
         >
       </div>
     </section>
-<section class="review-section relative bg-[#2d3a4f]">
-  <div class="content">
-    <div class="stars font-bold">★★★★★</div>
-    <div class="quote font-medium">
-      I couldn’t be happier with the landscaping job DIA provided! They were professional and efficient, and I’ll definitely be calling them again for future projects.
-    </div>
-    <div class="author">- M. FRIESEN</div>
-  </div>
-  <img src="/assets/img/halfWolf.png" alt="Logo" class="logo" />
-</section>
+    <section class="review-section relative bg-[#2d3a4f]">
+      <div class="content">
+        <div class="stars font-bold">★★★★★</div>
+        <div class="quote font-medium text-base ">
+          I couldn’t be happier with the landscaping job DIA provided! They were
+          professional and efficient, and I’ll definitely be calling them again
+          for future projects.
+        </div>
+        <div class="author">- M. FRIESEN</div>
+      </div>
+      <img src="/assets/img/halfWolf.png" alt="Logo" class="logo" />
+    </section>
 
 <section id="about" class="bg-white py-10">
   <div class="container mx-auto px-6">
@@ -259,7 +288,11 @@
               >
               <p class="font-semibold">204.955.1141</p>
               <h3 class="text-2xl font-gothamBold mt-4 text-[#4dc5e7]">
-                Level-Up Electrical<br />Kelly Unrau
+                <a
+                  href="https://levelupelectrical.ca/"
+                  class="hover:text-[#2d3a4f]"
+                  >Level Up Electrical</a
+                ><br />Kelly Unrau<br />
               </h3>
               <a href="mailto:kelly@levelupelectrical.ca" class="font-semibold"
                 >kelly@levelupelectrical.ca</a
@@ -333,6 +366,29 @@
       ></div>
     </footer>
 
-    <script src="test.js"></script>
+    <script src="app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DIA Projects",
+        "url": "https://diaprojects.ca",
+        "logo": "https://diaprojects.ca/assets/img/fullTextWolf.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-204-955-1141",
+          "contactType": "Customer Service"
+        },
+        "sameAs": ["https://www.instagram.com/diaprojectsinc/"]
+      }
+    </script>
+    <script>
+      window.si =
+        window.si ||
+        function () {
+          (window.siq = window.siq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>

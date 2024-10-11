@@ -63,10 +63,6 @@ html {
   scrollbar-width: none;
 }
 
-.links:hover {
-  transform: translateY(-5px);
-}
-
 #services {
   background-image: linear-gradient(
       to bottom,
@@ -273,7 +269,7 @@ html {
   }
 
   #about h2 {
-    font-size: 2.5rem; /* Adjust font size for mobile */
+    font-size: 1.3rem; /* Adjust font size for mobile */
   }
 
   #about h3 {

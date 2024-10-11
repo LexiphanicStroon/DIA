@@ -1,0 +1,106 @@
+{
+  "particles": {
+    "number": {
+      "value": 30, 
+      "density": {
+        "enable": true,
+        "value_area": 600
+      }
+    },
+    "color": {
+      "value": "#fff"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 1,
+        "color": "#44c2e5"
+      },
+      "polygon": {
+        "nb_sides": 6
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3, 
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150, 
+      "color": "#45c7ea",
+      "opacity": 0.7,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.5, 
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": true,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 200,
+        "line_linked": {
+          "opacity": 0.8,
+          "color": "#000000"
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 0.8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 2
+      },
+      "remove": {
+        "particles_nb": 1
+      }
+    }
+  },
+  "retina_detect": true
+}

@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 60,
+      "value": 80,
       "density": {
         "enable": true,
         "value_area": 800
@@ -13,7 +13,7 @@
     "shape": {
       "type": "polygon",
       "stroke": {
-        "width": 0,
+        "width": 1,
         "color": "#44c2e5"
       },
       "polygon": {
@@ -36,7 +36,7 @@
       }
     },
     "size": {
-      "value": 3,
+      "value": 4,
       "random": true,
       "anim": {
         "enable": false,
@@ -49,7 +49,7 @@
       "enable": true,
       "distance": 200,
       "color": "#45c7ea",
-      "opacity": 0.4,
+      "opacity": 0.7,
       "width": 1
     },
     "move": {

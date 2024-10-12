@@ -1,9 +1,9 @@
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 document.addEventListener('DOMContentLoaded', function () {
-  let configFile =
-    window.innerWidth < 768 ? 'particles-mobile.json' : 'particles.json';
-  particlesJS.load('particles-js', configFile, function () {
-    console.log('Particles configuration loaded: ' + configFile);
+  
+  
+  particlesJS.load('particles-js', 'particles.json', function () {
+    console.log('Particles configuration loaded: ' + 'particles.json');
   });
 });
 const scrollContainer = document.getElementById('scroll-container');

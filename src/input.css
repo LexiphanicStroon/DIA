@@ -38,9 +38,9 @@ html {
   user-select: none;
 }
 
-#home:hover #particles-js {
+/* #home:hover #particles-js {
   pointer-events: all;
-}
+} */
 
 .content {
   position: relative;

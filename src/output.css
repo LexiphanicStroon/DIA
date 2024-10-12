@@ -1046,8 +1046,12 @@ html {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: all;
+  touch-action: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 #home:hover #particles-js {

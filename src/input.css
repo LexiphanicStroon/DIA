@@ -34,6 +34,8 @@ html {
   left: 0;
   z-index: 0;
   pointer-events: all;
+  touch-action: auto;
+  user-select: none;
 }
 
 #home:hover #particles-js {

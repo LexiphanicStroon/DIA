@@ -1238,7 +1238,7 @@ html {
   background-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.5) 12.5%,
-      rgba(255, 255, 255, 1) 40%
+      rgba(255, 255, 255, 1) 45%
     ),
     url('assets/img/pattern.svg');
   background-size: cover;
